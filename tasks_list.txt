@@ -1,0 +1,198 @@
+Reusing configuration cache.
+
+> Task :folia-server:tasks
+
+------------------------------------------------------------
+Tasks runnable from project ':folia-server'
+------------------------------------------------------------
+
+Build tasks
+-----------
+assemble - Assembles the outputs of this project.
+build - Assembles and tests this project.
+buildDependents - Assembles and tests this project and all projects that depend on it.
+buildNeeded - Assembles and tests this project and all projects it depends on.
+classes - Assembles main classes.
+clean - Deletes the build directory.
+fixJarForReobf
+includeMappings
+jar - Assembles a jar archive containing the classes of the 'main' feature.
+log4jPluginsClasses - Assembles log4j plugins classes.
+relocateConstants
+reobfJar - Re-obfuscate the built jar to obf mappings
+testClasses - Assembles test classes.
+
+Bundling tasks
+--------------
+createMojmapBundlerJar - Build a runnable bundler jar
+createMojmapPaperclipJar - Build a runnable paperclip jar
+createReobfBundlerJar - Build a runnable bundler jar
+createReobfPaperclipJar - Build a runnable paperclip jar
+generateDevelopmentBundle
+
+Documentation tasks
+-------------------
+javadoc - Generates Javadoc API documentation for the 'main' feature.
+
+Fill tasks
+----------
+publishToFill - Publish to Fill
+
+Help tasks
+----------
+artifactTransforms - Displays the Artifact Transforms that can be executed in project ':folia-server'.
+buildEnvironment - Displays all buildscript dependencies declared in project ':folia-server'.
+dependencies - Displays all dependencies declared in project ':folia-server'.
+dependencyInsight - Displays the insight into a specific dependency in project ':folia-server'.
+help - Displays a help message.
+javaToolchains - Displays the detected java toolchains.
+kotlinDslAccessorsReport - Prints the Kotlin code for accessing the currently available project extensions.
+outgoingVariants - Displays the outgoing variants of project ':folia-server'.
+projects - Displays the sub-projects of project ':folia-server'.
+properties - Displays the properties of project ':folia-server'.
+resolvableConfigurations - Displays the configurations that can be resolved in project ':folia-server'.
+tasks - Displays the tasks runnable from project ':folia-server'.
+
+IDE tasks
+---------
+cleanIdea - Cleans IDEA project files (IML, IPR)
+idea - Generates IDEA project files (IML, IPR, IWS)
+
+Minecraft patching tasks
+------------------------
+applyMinecraftFeaturePatches - Applies all folia Minecraft feature patches
+applyMinecraftFilePatches - Applies all folia Minecraft file patches
+applyMinecraftPatches - Applies all folia Minecraft patches
+applyMinecraftResourcePatches - Applies folia file patches to the Minecraft resources
+applyMinecraftSourcePatches - Applies folia file patches to the Minecraft sources
+applyMinecraftSourcePatchesFuzzy - Applies folia file patches to the Minecraft sources
+applyOrMoveMinecraftSourcePatches - Applies folia file patches to the Minecraft sources as Git patches, moving any failed patches to the rejects dir. Useful when updating to a new Minecraft version.
+fixupMinecraftResourcePatches - Puts the currently tracked resource changes into the folia Minecraft resources file patches commit
+fixupMinecraftSourcePatches - Puts the currently tracked source changes into the folia Minecraft sources file patches commit
+rebuildMinecraftFeaturePatches - Rebuilds all folia feature patches to the Minecraft sources
+rebuildMinecraftFilePatches - Rebuilds all folia file patches to Minecraft
+rebuildMinecraftPatches - Rebuilds all folia patches to Minecraft
+rebuildMinecraftResourcePatches - Rebuilds folia file patches to the Minecraft resources
+rebuildMinecraftSourcePatches - Rebuilds folia file patches to the Minecraft sources
+
+Paperweight tasks
+-----------------
+cleanCache - Delete the project setup cache and task outputs.
+
+Paperweight internal tasks
+--------------------------
+cleanupMappings
+cloneSpigotBuildData
+collectFoliaATsFromPatches
+collectPaperATsFromPatches
+downloadMappings
+downloadMcLibrariesSources
+downloadMcManifest
+downloadMcVersionManifest
+downloadRuntimeClasspathSources
+downloadServerJar
+extractFromBundler
+extractMacheResources
+extractMacheSources
+extractMacheSourcesForDevBundle
+filterPaperServerFromPaper
+filterVanillaJar
+generateMappings
+generateRelocatedReobfMappings
+generateReobfMappings
+generateSpigotMappings
+importFoliaLibraryFiles
+importPaperLibraryFiles
+indexLibraryFiles
+macheDecompileJar
+macheRemapJar
+mergeFoliaATs
+mergePaperATs
+paperclipForDevBundle
+patchMappings
+patchReobfMappings
+runFoliaSetup - Applies folia ATs and library imports to Minecraft sources
+serverBundlerForDevBundle
+setupMacheResources - Setup Minecraft resources dir
+setupMacheSources - Setup Minecraft source dir (applying mache patches and paper ATs).
+setupMacheSourcesForDevBundle - Setup Minecraft source dir (applying mache patches).
+spigotRemapJar
+unpackSpigotBuildData
+
+Patching tasks
+--------------
+applyAllServerFeaturePatches - Applies all Minecraft and upstream server feature patches (equivalent to 'applyMinecraftFeaturePatches applyServerFeaturePatches')
+applyAllServerFilePatches - Applies all Minecraft and upstream server file patches (equivalent to 'applyMinecraftFilePatches applyServerFilePatches')
+applyAllServerPatches - Applies all Minecraft and upstream server patches (equivalent to 'applyMinecraftPatches applyServerPatches')
+rebuildAllServerFeaturePatches - Rebuilds all Minecraft and upstream server feature patches (equivalent to 'rebuildMinecraftFeaturePatches rebuildServerFeaturePatches')
+rebuildAllServerFilePatches - Rebuilds all Minecraft and upstream server file patches (equivalent to 'rebuildMinecraftFilePatches rebuildServerFilePatches')
+rebuildAllServerPatches - Rebuilds all Minecraft and upstream server patches (equivalent to 'rebuildMinecraftPatches rebuildServerPatches')
+
+Publishing tasks
+----------------
+publish - Publishes all publications produced by this project.
+publishAllPublicationsToPaperSnapshotsRepository - Publishes all Maven publications produced by this project to the paperSnapshots repository.
+publishToMavenLocal - Publishes all Maven publications produced by this project to the local Maven cache.
+
+Runs tasks
+----------
+runBundler - Spin up a test server from the Mojang mapped bundler jar
+runDevServer - Spin up a test server without assembling a jar
+runPaperclip - Spin up a test server from the Mojang mapped Paperclip jar
+runReobfBundler - Spin up a test server from the reobf bundler jar
+runReobfPaperclip - Spin up a test server from the reobf Paperclip jar
+runReobfServer - Spin up a test server from the reobfJar output jar
+runServer - Spin up a test server from the Mojang mapped server jar
+
+Server patching tasks
+---------------------
+applyOrMovePaperServerFilePatches - Applies paperServer file patches as Git patches, moving any failed patches to the rejects dir. Useful when updating to a new Minecraft version.
+applyPaperServerFeaturePatches - Applies paperServer feature patches
+applyPaperServerFilePatches - Applies paperServer file patches
+applyPaperServerFilePatchesFuzzy - Applies paperServer file patches
+applyPaperServerPatches - Applies all paperServer patches
+applyServerFeaturePatches - Applies paperServer feature patches
+applyServerFilePatches - Applies paperServer file patches
+applyServerPatches - Applies all paperServer patches
+fixupPaperServerFilePatches - Puts the currently tracked source changes into the paperServer file patches commit
+rebuildPaperServerFeaturePatches - Rebuilds paperServer feature patches
+rebuildPaperServerFilePatches - Rebuilds paperServer file patches
+rebuildPaperServerPatches - Rebuilds all paperServer patches
+rebuildServerFeaturePatches - Applies paperServer feature patches
+rebuildServerFilePatches - Rebuilds paperServer file patches
+rebuildServerPatches - Rebuilds all paperServer patches
+
+Upstream minecraft patching tasks
+---------------------------------
+applyPaperMinecraftFeaturePatches - Applies all paper Minecraft feature patches
+applyPaperMinecraftFilePatches - Applies all paper Minecraft file patches
+applyPaperMinecraftPatches - Applies all paper Minecraft patches
+applyPaperMinecraftResourcePatches - Applies paper file patches to the Minecraft resources
+applyPaperMinecraftSourcePatches - Applies paper file patches to the Minecraft sources
+applyPaperMinecraftSourcePatchesFuzzy - Applies paper file patches to the Minecraft sources
+
+Verification tasks
+------------------
+check - Runs all checks.
+scanJarForBadCalls
+test - Runs the test suite.
+
+Other tasks
+-----------
+cleanIdeaModule
+compileJava - Compiles main Java source.
+compileLog4jPluginsJava - Compiles log4j plugins Java source.
+compileTestJava - Compiles test Java source.
+ideaModule - Generates IDEA module files (IML)
+processLog4jPluginsResources - Processes log4j plugins resources.
+processResources - Processes main resources.
+processTestResources - Processes test resources.
+
+Rules
+-----
+Pattern: clean<TaskName>: Cleans the output files of a task.
+Pattern: build<ConfigurationName>: Assembles the artifacts of a configuration.
+
+BUILD SUCCESSFUL in 947ms
+1 actionable task: 1 executed
+Configuration cache entry reused.
