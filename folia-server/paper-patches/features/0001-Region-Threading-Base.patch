@@ -3958,3 +3958,36 @@ index ba271c35eb2804f94cfc893bf94affb9ae13d3ba..db9285c2ff0c805f5d9564b6e8520c33
      @Override
      public @NotNull String getName() {
          return this.identifier;
+     }
+ }
+diff --git a/src/main/java/org/spigotmc/RestartCommand.java b/src/main/java/org/spigotmc/RestartCommand.java
+index 401614742a781031264c39930987309907f18579..720885e332d6652b47596561250289a016625807 100644
+--- a/src/main/java/org/spigotmc/RestartCommand.java
++++ b/src/main/java/org/spigotmc/RestartCommand.java
+@@ -23,7 +23,7 @@ public class RestartCommand extends Command {
+     @Override
+     public boolean execute(CommandSender sender, String currentAlias, String[] args) {
+         if (this.testPermission(sender)) {
+-            MinecraftServer.getServer().processQueue.add(RestartCommand::restart);
++            io.papermc.paper.threadedregions.RegionizedServer.getInstance().addTask(RestartCommand::restart); // Folia - region threading
+         }
+         return true;
+     }
+@@ -66,7 +66,7 @@ public class RestartCommand extends Command {
+             }
+ 
+             // Actually stop the JVM
+-            System.exit(0);
++            //System.exit(0); // Folia - region threading
+         } else {
+             // Mark the server to shutdown at the end of the tick
+             MinecraftServer.getServer().safeShutdown(false, isRestarting);
+@@ -85,7 +85,7 @@ public class RestartCommand extends Command {
+ 
+             // If the server hasn't stopped by now, assume worse case and kill
+             closeSocket();
+-            System.exit(0);
++            //System.exit(0); // Folia - region threading
+         }
+         }
+         // Paper end
