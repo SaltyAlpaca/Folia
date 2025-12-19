@@ -3988,6 +3988,19 @@ index 401614742a781031264c39930987309907f18579..720885e332d6652b47596561250289a0
              closeSocket();
 -            System.exit(0);
 +            //System.exit(0); // Folia - region threading
-         }
-         }
-         // Paper end
+                 }
+                     }
+                 }
+                     // Paper end
+                 diff --git a/src/main/java/io/papermc/paper/configuration/PaperConfigurations.java b/src/main/java/io/papermc/paper/configuration/PaperConfigurations.java             index e0491ef5c..b288d8fed 100644
+             --- a/src/main/java/io/papermc/paper/configuration/PaperConfigurations.java
+             +++ b/src/main/java/io/papermc/paper/configuration/PaperConfigurations.java
+             @@ -340,7 +340,7 @@ public class PaperConfigurations extends Configurations<GlobalConfiguration, Wor
+                      }
+                  }
+              
+             -    private static List<Definition<? extends Annotation, ?, ? extends FieldProcessor.Factory<?, ?>>> defaultFieldProcessors() {
+             +    private static List defaultFieldProcessors() {
+                      return List.of(
+                          MergeMap.DEFINITION
+                      );         
