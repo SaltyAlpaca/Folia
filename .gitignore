@@ -14,3 +14,7 @@ build
 /paper-api-generator
 
 .idea/
+
+bin/
+*.jar
+log.txt
